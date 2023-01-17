@@ -1,0 +1,46 @@
+#include<stdio.h>
+void sum();
+void subtract();
+void iseven();
+int main()
+{ 
+    // void sum();
+    sum();
+    sum();
+    subtract();
+    iseven();
+    subtract();
+    iseven();
+    return 0;
+}
+void sum()
+{
+    int a,b,c;
+    printf("Enter number\n");
+    scanf("%d%d",&a,&b);
+    c=a+b;
+    printf("addition of number is=%d\n",c);
+}
+void subtract()
+{
+    int a,b,c;
+    printf("Enter number\n");
+    scanf("%d%d",&a,&b);
+    c=a-b;
+    printf("subtraction of number=%d\n",c);
+}
+void iseven()
+{
+    int num;
+    printf("number is even or odd ?\n");
+    scanf("%d",&num);
+    if(num%2==0)
+    {
+        printf("Number is Even");
+    }
+    else
+    {
+        printf("number IS Odd");
+    }
+    printf("\n");
+}
