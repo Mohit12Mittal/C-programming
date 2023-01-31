@@ -1,0 +1,21 @@
+#include <stdio.h>
+int doWork(int n);
+
+int main()
+{
+    int n;
+    printf("enter any no.=");
+    scanf("%d",&n);
+    printf("factorial=%d",doWork(n));
+
+    return 0;
+}
+int doWork(int n)
+{
+    if(n==0){
+        return 1;
+    }
+    int nm1=doWork(n-1);
+    int m=nm1*n;
+    return m;
+}
