@@ -1,0 +1,53 @@
+#include<stdio.h>
+int main()
+{
+    int choose;
+    int base,w,k,loc;
+    printf("Choose which dimensional array operation you want to perform");
+    scanf("%d",&choose);
+    if(choose==1)
+    {
+         int num;
+         printf("Enter the size of array");
+         scanf("%d",&num);
+         int A[num];
+         for(int i=0;i<num;i++)
+         {
+            A[0]=100;
+         }
+         
+        printf("Enter the value of base,size,position");
+         
+        scanf("%d,%d",&w,&k);
+        loc=A[0]+w*k;
+        printf("%d",loc);
+    }
+    else if(choose==2)
+    {
+    int rmocm;
+    printf("chhose which you want to perform row major or collumn major ");
+    scanf("%d",&rmocm);
+    if(rmocm==3)
+    {
+        int base,w,n,i,l1,l2,j;
+        printf("Enter the value of the following");
+        scanf("%d,%d,%d,%d,%d,%d,%d",&base,&w,&n,&i,&j,&l1,&l2);
+        loc=base+w*(n*(i-l1)+(j-l2));
+        printf("%d",loc);
+    }
+    if(rmocm==4)
+    {
+        int base,m,w,j,l2,i,l1;
+        printf("Enter the value of following");
+        scanf("%d%d%d%d%d%d%d",&base,&m,&w,&j,&l2,&i,&l1);
+        loc=base+m*(w*(j-l2)+(i-l1));
+        printf("%d",loc);
+    }
+    if(rmocm!=3 || rmocm!=4)
+    {
+        printf("Invalid");
+    }
+    
+    return 0;
+}
+}
