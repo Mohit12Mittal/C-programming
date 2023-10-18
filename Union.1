@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<string.h>
+union Data{
+        char name[20];
+        int rollno;
+        char sec[1];
+    }S1;
+
+int main()
+{
+    printf("Hello World\n");
+    printf("%ld\n",sizeof(S1));
+    strcpy(S1.name,"Mohit Mittal");
+    printf("%s\n",S1.name);
+    S1.rollno=32;
+    printf("%d\n",S1.rollno);
+    return 0;
+}
