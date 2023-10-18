@@ -1,0 +1,15 @@
+#include <stdio.h>
+typedef struct student{
+        char name[20];
+        int rollno;
+        char sec[1];
+    }var2;
+
+int main()
+{
+    printf("Hello World\n");
+    var2 var1={"Mohit Mittal",32,'C'};
+    printf("%s\n",var1.name);
+    printf("%s\n",var1.sec);
+    return 0;
+}
