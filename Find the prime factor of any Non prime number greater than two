@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    int num,res;
+    printf("Enter the number to find factor of that number");
+    scanf("%d",&num);
+    res=sqrt(num);
+    while(num%2==0)
+    {
+        printf("%d\n",2);
+        num=num/2;
+    }
+    for(int i=3;i<=res;i=i+2)
+    {
+        while(num%i==0)
+        {
+          printf("%d\n",i);
+          num=num/i;
+        }
+    }
+    
+   
+    return 0;
+}
