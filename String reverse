@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[]="Mohit Mittal";
+    int count=strlen(str);
+    printf("%d\n",count);
+    for(int i=count;i>=0;i--)
+    {
+        printf("%c",str[i]);
+    }
+   
+}
