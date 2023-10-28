@@ -1,0 +1,33 @@
+#include<stdio.h>
+int factorial(int reminder)
+{
+    int fact=1;
+    while(reminder>0)
+    {
+    fact=fact*reminder;
+    reminder--;
+    }
+    return fact;
+}
+int main()
+{
+    int num,reminder,sum=0;
+    printf("Enter the number to check whether it is strong number or not");
+    scanf("%d",&num);
+    int number=num;
+    while(num>0)
+    {
+     reminder=num%10;
+     sum=sum+factorial(reminder);
+     num=num/10;
+    }
+    if(sum==number)
+    {
+        printf("Given number is Strong number");
+    }
+    else
+    {
+        printf("Not a Strong number");
+    }
+    
+}
