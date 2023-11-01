@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int num,count=0,res;
+    scanf("%d",&num);
+    for(int i=1;i<=10;i++)
+    {
+        if(pow(2,i)>=num && pow(2,i-1)<num)
+        {
+            count=i;
+            break;
+        }
+    }
+    int str[count];
+    int i=0;
+    while(num>0)
+    {
+        str[i]=num%2;
+        num=num/2;
+        i++;
+    }
+    for(int j=i-1;j>=0;j--)
+    {
+        printf("%d",str[j]);
+    }
+    return 0;
+}
