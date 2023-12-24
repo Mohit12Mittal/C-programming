@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("Enter the size of Array");
+    scanf("%d",&num);
+    int d;
+    printf("Enter the index from where you want to start the rotation");
+    scanf("%d",&d);
+    int Arr[num];
+    printf("Enter the elements of array");
+    for(int i=0;i<num;i++)
+    {
+        scanf("%d",&Arr[i]);
+    }
+ 
+   int temp[num];
+   for(int i=0;i<num;i++)
+   {
+    temp[i]=Arr[i+d-1];
+   }
+   printf("Output is:");
+   for(int i=0;i<d-1;i++)
+   {
+    temp[num-d+i+1]=Arr[i];
+   }
+
+   for(int i=0;i<num;i++)
+   {
+    printf("%d ",temp[i]);
+   }
+   return 0;
+}
